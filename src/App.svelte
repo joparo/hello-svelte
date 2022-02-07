@@ -1,21 +1,15 @@
 <script>
-	export let name;
-	const handleClick = () => {
-        name = 'World';
-    }
-	const handleInput = (e) => {
-        name = e.target.value;
-    }
+	let firstName = 'Captain';
+	let lastName = 'Marvel';
+	let fullName = `${firstName.toUpperCase()} ${lastName.toUpperCase()}`;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	Hello <input type="text" on:input={handleInput} value={name}>
-    <button on:click={handleClick}>Reset</button>
-
-	<div> 
-	Hello <input type="text" bind:value={name}>
-	</div>
+	<h1>Hello {fullName}!</h1>
+	
+	<input type="text" bind:value={firstName}>
+	<input type="text" bind:value={lastName}>
+	
 </main>
 
 <style>

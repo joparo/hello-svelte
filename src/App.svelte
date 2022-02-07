@@ -12,6 +12,10 @@
 	<h1>Hello {name}!</h1>
 	Hello <input type="text" on:input={handleInput} value={name}>
     <button on:click={handleClick}>Reset</button>
+
+	<div> 
+	Hello <input type="text" bind:value={name}>
+	</div>
 </main>
 
 <style>

@@ -1,7 +1,7 @@
 <script>
 	let firstName = 'Captain';
 	let lastName = 'Marvel';
-	let fullName = `${firstName.toUpperCase()} ${lastName.toUpperCase()}`;
+	$: fullName = `${firstName.toUpperCase()} ${lastName.toUpperCase()}`;
 </script>
 
 <main>

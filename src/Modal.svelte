@@ -1,6 +1,6 @@
 <script>
 export let message = '';
-let showModal = true;
+export let showModal = false;
 </script>
 
 {#if showModal}

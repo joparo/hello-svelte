@@ -15,9 +15,15 @@
 	const removeHero = (id) => {
 		heroes = heroes.filter(hero => hero.id != id);
 	}
+
+	let showModal = false;
+
+	const toggleModal = () => {
+		showModal = !showModal;
+	}
 </script>
 
-<Modal message="The world needs more heroes"/>
+<Modal showModal={showModal} message="The world needs more heroes"/>
 
 <main>
 	<h1>Hello {fullName}!</h1>
@@ -42,7 +48,7 @@
 		<p>We are doomed</p>
     {/if}
 
-	
+	<button on:click={toggleModal}>Recruit a new hero</button>
 
 </main>
 

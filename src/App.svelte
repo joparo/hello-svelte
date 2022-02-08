@@ -24,7 +24,7 @@
 	<h4>
 	{hero.name}
 	</h4>
-	<button on:click="{removeHero(hero.id)}">Remove</button>
+	<button on:click="{() => heroes = heroes.filter(h => hero.id != h.id)}">Remove</button>
 	{:else}
 		<p>The world has lost all hope</p>
 	{/each}

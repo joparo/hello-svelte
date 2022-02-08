@@ -8,6 +8,10 @@
 		{ name : 'Hawkeye', power : 'Average', id: 2 },
 		{ name : 'Black widow', power : 'Good', id: 3 },
 	];
+
+	const removeHero = (id) => {
+		heroes = heroes.filter(hero => hero.id != id);
+	}
 </script>
 
 <main>
@@ -20,6 +24,7 @@
 	<h4>
 	{hero.name}
 	</h4>
+	<button on:click="{removeHero(hero.id)}">Remove</button>
 	{:else}
 		<p>The world has lost all hope</p>
 	{/each}

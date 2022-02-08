@@ -29,6 +29,14 @@
 		<p>The world has lost all hope</p>
 	{/each}
 	
+	{#if heroes.length > 2}
+        <p>We can still fight Thanos</p>
+    {:else if heroes.length > 1}
+        <p>We can try to fight Thanos</p>
+	{:else}
+		<p>We are doomed</p>
+    {/if}
+
 </main>
 
 <style>

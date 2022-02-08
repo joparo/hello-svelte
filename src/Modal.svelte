@@ -4,7 +4,7 @@ export let showModal = false;
 </script>
 
 {#if showModal}
-    <div class="backdrop">
+    <div class="backdrop" on:click>
         <div class="modal">
             <p>{message}</p>
         </div>

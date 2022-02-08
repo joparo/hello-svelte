@@ -23,7 +23,7 @@
 	}
 </script>
 
-<Modal showModal={showModal} message="The world needs more heroes"/>
+<Modal showModal={showModal} message="The world needs more heroes" on:click={toggleModal}/>
 
 <main>
 	<h1>Hello {fullName}!</h1>

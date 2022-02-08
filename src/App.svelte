@@ -2,6 +2,8 @@
 	let firstName = 'Captain';
 	let lastName = 'Marvel';
 	$: fullName = `${firstName.toUpperCase()} ${lastName.toUpperCase()}`;
+
+	$: window.alert(`Firstname: ${firstName}`);
 </script>
 
 <main>

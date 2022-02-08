@@ -1,4 +1,7 @@
 <script>
+
+	import Modal from './Modal.svelte';
+
 	let firstName = 'Captain';
 	let lastName = 'Marvel';
 	$: fullName = `${firstName.toUpperCase()} ${lastName.toUpperCase()}`;
@@ -36,6 +39,8 @@
 	{:else}
 		<p>We are doomed</p>
     {/if}
+
+	<Modal message="The world needs more heroes"/>
 
 </main>
 

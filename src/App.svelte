@@ -17,6 +17,8 @@
 	}
 </script>
 
+<Modal message="The world needs more heroes"/>
+
 <main>
 	<h1>Hello {fullName}!</h1>
 	
@@ -40,7 +42,7 @@
 		<p>We are doomed</p>
     {/if}
 
-	<Modal message="The world needs more heroes"/>
+	
 
 </main>
 
@@ -50,7 +52,7 @@
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
-	}
+	}	
 
 	h1 {
 		color: #ff3e00;

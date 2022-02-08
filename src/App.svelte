@@ -1,6 +1,7 @@
 <script>
 
 	import Modal from './Modal.svelte';
+	import RecruitHero from './RecruitHero.svelte';
 
 	let firstName = 'Captain';
 	let lastName = 'Marvel';
@@ -23,7 +24,11 @@
 	}
 </script>
 
-<Modal showModal={showModal} message="The world needs more heroes" on:click={toggleModal}/>
+<Modal showModal={showModal} message="The world needs more heroes" on:click={toggleModal}>
+	<h3 slot=title>Recruit your hero!</h3>
+	<RecruitHero/>
+</Modal>
+
 
 <main>
 	<h1>Hello {fullName}!</h1>

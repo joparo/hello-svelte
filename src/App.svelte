@@ -3,7 +3,11 @@
 	let lastName = 'Marvel';
 	$: fullName = `${firstName.toUpperCase()} ${lastName.toUpperCase()}`;
 
-	$: window.alert(`Firstname: ${firstName}`);
+	let heroes = [
+		{ name : 'Captain Marvel', power : 'Great', id: 1 },
+		{ name : 'Hawkeye', power : 'Average', id: 2 },
+		{ name : 'Black widow', power : 'Good', id: 3 },
+	];
 </script>
 
 <main>
@@ -11,6 +15,14 @@
 	
 	<input type="text" bind:value={firstName}>
 	<input type="text" bind:value={lastName}>
+	
+	{#each heroes as hero (hero.id)}
+	<h4>
+	{hero.name}
+	</h4>
+	{:else}
+		<p>The world has lost all hope</p>
+	{/each}
 	
 </main>
 

@@ -22,11 +22,16 @@
 	const toggleModal = () => {
 		showModal = !showModal;
 	}
+	const addHero = (e) => {
+		const hero = e.detail;
+		heroes = [hero, ...heroes];
+		showModal = false;
+	}
 </script>
 
 <Modal showModal={showModal} message="The world needs more heroes" on:click={toggleModal}>
 	<h3 slot=title>Recruit your hero!</h3>
-	<RecruitHero/>
+	<RecruitHero on:addHero={addHero}/>
 </Modal>
 
 

@@ -11,7 +11,13 @@
 
 <form on:submit|preventDefault={handleSubmit}>
     <input type="text" placeholder="name" bind:value={name}>
-    <input type="text" placeholder="power" bind:value={power}>
+    <label>Power</label>
+    <select bind:value={power}>
+    <option value="Weak">Weak</option>
+    <option value="Strong">Strong</option>
+    <option value="Strongest">Strongest</option>
+    </select>
+
     <label>Abilities</label>
     <input type="checkbox" bind:group={abilities} value="Super strength"> Super strength<br>
     <input type="checkbox" bind:group={abilities} value="Flight"> Flight<br>
